@@ -2,6 +2,10 @@ package com.bamboo.pojo;
 
 import java.util.Date;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+import com.bamboo.constants.MongoDBConstants;
+
+@Document(collection = MongoDBConstants.POSTINGS_COLLECTION)
 public class Post {
 	String _id;
 	String title;
@@ -11,24 +15,6 @@ public class Post {
 	int numLikes;
 	int numDislikes;
 	String commentId;
-	String username;
-	String password;
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	public void setId(String id) {
 		this._id = id;
