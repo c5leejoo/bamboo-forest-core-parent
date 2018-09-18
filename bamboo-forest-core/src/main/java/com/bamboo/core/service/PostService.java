@@ -1,7 +1,9 @@
 package com.bamboo.core.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.bamboo.repository.PostRepository;
 import com.bamboo.request.PostRequest;
 import com.bamboo.response.PostResponse;
 
@@ -13,6 +15,9 @@ import com.bamboo.response.PostResponse;
 @Service
 public class PostService {
 
+	@Autowired
+	private PostRepository postRepository;
+
 	/**
 	 * @author joowon.lee
 	 * @date August 25, 2018
@@ -20,9 +25,11 @@ public class PostService {
 	 */
 	public PostResponse createPost(PostRequest requestBody) {
 		// TODO Auto-generated method stub
+		
+		postRepository.save(requestBody.getPost());
 		return null;
 	}
-	
+
 	/**
 	 * @author joowon.lee
 	 * @date September 13, 2018

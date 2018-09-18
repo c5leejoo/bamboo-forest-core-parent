@@ -1,17 +1,13 @@
-package com.bamboo.request;
+package com.bamboo.response;
 
 import com.bamboo.pojo.Comment;
 import com.bamboo.pojo.User;
 
-/**
- * @author joowon.lee
- * @date September 17, 2018
- * 
- */
-public class CommentRequest {
+public class CommentResponse {
+
 //	private User user;
 	private Comment comment;
-
+//
 //	public User getUser() {
 //		return user;
 //	}
