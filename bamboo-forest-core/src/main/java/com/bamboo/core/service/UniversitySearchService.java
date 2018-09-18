@@ -11,7 +11,7 @@ import com.bamboo.response.UniversitySearchResponse;
  * 
  */
 @Service
-public class BambooSearchService {
+public class UniversitySearchService {
 	
 	public UniversitySearchResponse searchBamboo(UniversitySearchRequest searchReq) {
 		// TODO Auto-generated method stub

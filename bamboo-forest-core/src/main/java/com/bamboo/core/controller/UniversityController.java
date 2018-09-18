@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bamboo.core.service.BambooSearchService;
+import com.bamboo.core.service.UniversitySearchService;
 import com.bamboo.request.UniversitySearchRequest;
 import com.bamboo.response.UniversitySearchResponse;
 
@@ -21,12 +21,12 @@ import com.bamboo.response.UniversitySearchResponse;
  */
 @RestController
 @RequestMapping(value = { "/bamboo" })
-public class BambooController {
+public class UniversityController {
 
-	private final static Logger logger = LoggerFactory.getLogger(BambooController.class);
+	private final static Logger logger = LoggerFactory.getLogger(UniversityController.class);
 
 	@Autowired
-	BambooSearchService bambooSearchService;
+	UniversitySearchService bambooSearchService;
 
 	/**
 	 * @param searchReq
