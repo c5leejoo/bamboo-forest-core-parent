@@ -1,7 +1,7 @@
 package com.bamboo.request;
 
-import com.bamboo.pojo.Post;
-import com.bamboo.pojo.User;
+import com.bamboo.model.Post;
+import com.bamboo.model.User;
 
 /**
  * @author joowon.lee

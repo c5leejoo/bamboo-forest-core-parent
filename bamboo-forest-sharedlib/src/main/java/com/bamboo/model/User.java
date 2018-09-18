@@ -1,4 +1,4 @@
-package com.bamboo.pojo;
+package com.bamboo.model;
 
 import java.util.List;
 

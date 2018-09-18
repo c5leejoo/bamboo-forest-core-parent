@@ -3,7 +3,7 @@ package com.bamboo.core.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bamboo.pojo.Comment;
+import com.bamboo.model.Comment;
 import com.bamboo.repository.CommentRepository;
 import com.bamboo.request.CommentRequest;
 import com.bamboo.response.CommentResponse;

@@ -1,7 +1,7 @@
 package com.bamboo.request;
 
-import com.bamboo.pojo.Comment;
-import com.bamboo.pojo.User;
+import com.bamboo.model.Comment;
+import com.bamboo.model.User;
 
 /**
  * @author joowon.lee
@@ -9,16 +9,16 @@ import com.bamboo.pojo.User;
  * 
  */
 public class CommentRequest {
-//	private User user;
+	private User user;
 	private Comment comment;
 
-//	public User getUser() {
-//		return user;
-//	}
-//
-//	public void setUser(User user) {
-//		this.user = user;
-//	}
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	public Comment getComment() {
 		return comment;

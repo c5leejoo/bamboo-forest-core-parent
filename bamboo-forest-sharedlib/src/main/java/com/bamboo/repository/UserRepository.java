@@ -3,7 +3,7 @@ package com.bamboo.repository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.bamboo.pojo.User;
+import com.bamboo.model.User;
 
 /**
  * @author joowon.lee

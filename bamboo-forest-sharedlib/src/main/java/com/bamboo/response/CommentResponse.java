@@ -1,7 +1,7 @@
 package com.bamboo.response;
 
-import com.bamboo.pojo.Comment;
-import com.bamboo.pojo.User;
+import com.bamboo.model.Comment;
+import com.bamboo.model.User;
 
 public class CommentResponse {
 
