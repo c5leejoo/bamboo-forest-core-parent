@@ -1,27 +1,35 @@
 package com.bamboo.pojo;
 
 import java.util.Date;
+import java.util.List;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import com.bamboo.constants.MongoDBConstants;
 
-@Document(collection = MongoDBConstants.POSTINGS_COLLECTION)
+/**
+ * @author joowon.lee
+ * @date September 17, 2018
+ * 
+ */
+@Document(collection = MongoDBConstants.POSTS_COLLECTION)
 public class Post {
+	@Id
 	String _id;
 	String title;
+	String contents;
 	String university;
-	String content;
 	Date postCreatedDate;
+	Date lastUpdatedDate;
+	List<Comment> comments;
 	int numLikes;
-	int numDislikes;
-	String commentId;
 
-	public void setId(String id) {
-		this._id = id;
+	public String get_id() {
+		return _id;
 	}
 
-	public String getId() {
-		return this._id;
+	public void set_id(String _id) {
+		this._id = _id;
 	}
 
 	public String getTitle() {
@@ -32,12 +40,20 @@ public class Post {
 		this.title = title;
 	}
 
-	public String getContent() {
-		return content;
+	public String getContents() {
+		return contents;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setContents(String contents) {
+		this.contents = contents;
+	}
+
+	public String getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(String university) {
+		this.university = university;
 	}
 
 	public Date getPostCreatedDate() {
@@ -48,6 +64,22 @@ public class Post {
 		this.postCreatedDate = postCreatedDate;
 	}
 
+	public Date getLastUpdatedDate() {
+		return lastUpdatedDate;
+	}
+
+	public void setLastUpdatedDate(Date lastUpdatedDate) {
+		this.lastUpdatedDate = lastUpdatedDate;
+	}
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
+
 	public int getNumLikes() {
 		return numLikes;
 	}
@@ -56,27 +88,4 @@ public class Post {
 		this.numLikes = numLikes;
 	}
 
-	public int getNumDislikes() {
-		return numDislikes;
-	}
-
-	public void setNumDislikes(int numDislikes) {
-		this.numDislikes = numDislikes;
-	}
-
-	public String getCommentId() {
-		return commentId;
-	}
-
-	public void setCommentId(String commentId) {
-		this.commentId = commentId;
-	}
-
-	public void setUniversity(String university) {
-		this.university = university;
-	}
-
-	public String getUniversity() {
-		return this.university;
-	}
 }

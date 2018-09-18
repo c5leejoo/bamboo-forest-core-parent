@@ -10,12 +10,12 @@ import com.bamboo.constants.MongoDBConstants;
  * @date September 17, 2018
  * 
  */
-@Document(collection = MongoDBConstants.COMMENTS_COLLECTION)
-public class Comment {
+@Document(collection = MongoDBConstants.UNIVERSITIES_COLLECTION)
+public class University {
 
 	@Id
 	private String _id;
-	private String contents;
+	private String name;
 
 	public String get_id() {
 		return _id;
@@ -25,11 +25,12 @@ public class Comment {
 		this._id = _id;
 	}
 
-	public String getContents() {
-		return contents;
+	public String getName() {
+		return name;
 	}
 
-	public void setContents(String contents) {
-		this.contents = contents;
+	public void setName(String name) {
+		this.name = name;
 	}
+
 }

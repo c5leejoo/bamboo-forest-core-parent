@@ -2,8 +2,8 @@ package com.bamboo.core.service;
 
 import org.springframework.stereotype.Service;
 
-import com.bamboo.request.BambooSearchRequest;
-import com.bamboo.response.BambooSearchResponse;
+import com.bamboo.request.UniversitySearchRequest;
+import com.bamboo.response.UniversitySearchResponse;
 
 /**
  * @author joowon.lee
@@ -13,7 +13,7 @@ import com.bamboo.response.BambooSearchResponse;
 @Service
 public class BambooSearchService {
 	
-	public BambooSearchResponse searchBamboo(BambooSearchRequest searchReq) {
+	public UniversitySearchResponse searchBamboo(UniversitySearchRequest searchReq) {
 		// TODO Auto-generated method stub
 		return null;
 	}

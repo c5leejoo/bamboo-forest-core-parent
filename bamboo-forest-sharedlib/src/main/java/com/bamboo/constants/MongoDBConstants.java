@@ -8,8 +8,13 @@ package com.bamboo.constants;
 public class MongoDBConstants {
 
 	// Collections
+	public static final String POSTS_COLLECTION = "posts";
 
-	public static final String POSTINGS_COLLECTION = "postings";
+	public static final String UNIVERSITIES_COLLECTION = "universities";
+
+	public static final String USERS_COLLECTION = "users";
+
+	public static final String COMMENTS_COLLECTION = "comments";
 
 	// Operators
 	public static final String LOGICAL_OPERATOR_AND = "$and";

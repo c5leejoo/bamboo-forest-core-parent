@@ -8,7 +8,6 @@ package com.bamboo.constants;
 public class CommonConstants {
 
 	public static final String ADMIN = "Admin";
-	public static final String MEDIA_PROVIDER = "mediaProvider";
-	public static final String BUYER = "buyer";
+
 
 }

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bamboo.core.service.BambooSearchService;
-import com.bamboo.request.BambooSearchRequest;
-import com.bamboo.response.BambooSearchResponse;
+import com.bamboo.request.UniversitySearchRequest;
+import com.bamboo.response.UniversitySearchResponse;
 
 /**
  * @author joowon.lee
@@ -35,13 +35,13 @@ public class BambooController {
 	 * @date September 17, 2018
 	 */
 	@RequestMapping(value = "/search", method = RequestMethod.POST, produces = "application/json")
-	public ResponseEntity<BambooSearchResponse> searchPost(@RequestBody BambooSearchRequest searchReq) throws Exception {
+	public ResponseEntity<UniversitySearchResponse> searchPost(@RequestBody UniversitySearchRequest searchReq) throws Exception {
 
 		logger.debug("Bamboo Controller - Search Bamboo");
 
-		BambooSearchResponse searchResponse = bambooSearchService.searchBamboo(searchReq);
+		UniversitySearchResponse searchResponse = bambooSearchService.searchBamboo(searchReq);
 
-		return new ResponseEntity<BambooSearchResponse>(searchResponse, HttpStatus.OK);
+		return new ResponseEntity<UniversitySearchResponse>(searchResponse, HttpStatus.OK);
 	}
 
 }
