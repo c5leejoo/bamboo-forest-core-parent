@@ -15,6 +15,8 @@ public class MongoDBConstants {
 	public static final String USERS_COLLECTION = "users";
 
 	public static final String COMMENTS_COLLECTION = "comments";
+	
+	public static final String SEQUENCE_COLLECTION = "sequence";
 
 	// Operators
 	public static final String LOGICAL_OPERATOR_AND = "$and";

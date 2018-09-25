@@ -46,7 +46,7 @@ public class UniversityController {
 
 		logger.debug("University Controller - Search University");
 
-		UniversitySearchResponse searchResponse = universitySearchService.searchBamboo(searchReq);
+		UniversitySearchResponse searchResponse = universitySearchService.searchUniversity(searchReq);
 
 		return new ResponseEntity<UniversitySearchResponse>(searchResponse, HttpStatus.OK);
 	}
@@ -63,9 +63,8 @@ public class UniversityController {
 
 		logger.debug("University Controller - Save University");
 
-		UniversityResponse response = universityService.saveBamboo(universityReq);
+		UniversityResponse response = universityService.saveUniversity(universityReq);
 
 		return new ResponseEntity<UniversityResponse>(response, HttpStatus.OK);
 	}
-
 }

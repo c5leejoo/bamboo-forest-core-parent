@@ -1,6 +1,8 @@
 package com.bamboo.request;
 
 import com.bamboo.model.University;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  * @author joowon.lee
@@ -8,7 +10,8 @@ import com.bamboo.model.University;
  * 
  */
 public class UniversitySearchRequest {
-
+	
+	@JsonInclude(content=Include.ALWAYS)
 	private University university;
 
 	public University getUniversity() {
