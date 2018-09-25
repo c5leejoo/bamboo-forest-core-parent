@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bamboo.core.service.UniversitySearchService;
+import com.bamboo.core.service.UniversityService;
+import com.bamboo.request.UniversityRequest;
 import com.bamboo.request.UniversitySearchRequest;
+import com.bamboo.response.UniversityResponse;
 import com.bamboo.response.UniversitySearchResponse;
 
 /**
@@ -20,13 +23,16 @@ import com.bamboo.response.UniversitySearchResponse;
  * 
  */
 @RestController
-@RequestMapping(value = { "/bamboo" })
+@RequestMapping(value = { "/university" })
 public class UniversityController {
 
 	private final static Logger logger = LoggerFactory.getLogger(UniversityController.class);
 
 	@Autowired
-	UniversitySearchService bambooSearchService;
+	UniversitySearchService universitySearchService;
+
+	@Autowired
+	UniversityService universityService;
 
 	/**
 	 * @param searchReq
@@ -35,13 +41,31 @@ public class UniversityController {
 	 * @date September 17, 2018
 	 */
 	@RequestMapping(value = "/search", method = RequestMethod.POST, produces = "application/json")
-	public ResponseEntity<UniversitySearchResponse> searchPost(@RequestBody UniversitySearchRequest searchReq) throws Exception {
+	public ResponseEntity<UniversitySearchResponse> searchUniversity(@RequestBody UniversitySearchRequest searchReq)
+			throws Exception {
 
-		logger.debug("Bamboo Controller - Search Bamboo");
+		logger.debug("University Controller - Search University");
 
-		UniversitySearchResponse searchResponse = bambooSearchService.searchBamboo(searchReq);
+		UniversitySearchResponse searchResponse = universitySearchService.searchBamboo(searchReq);
 
 		return new ResponseEntity<UniversitySearchResponse>(searchResponse, HttpStatus.OK);
+	}
+
+	/**
+	 * @param searchReq
+	 * @return ResponseEntity
+	 * @author joowon.lee
+	 * @date September 17, 2018
+	 */
+	@RequestMapping(value = "/save", method = RequestMethod.POST, produces = "application/json")
+	public ResponseEntity<UniversityResponse> saveUniversity(@RequestBody UniversityRequest universityReq)
+			throws Exception {
+
+		logger.debug("University Controller - Save University");
+
+		UniversityResponse response = universityService.saveBamboo(universityReq);
+
+		return new ResponseEntity<UniversityResponse>(response, HttpStatus.OK);
 	}
 
 }

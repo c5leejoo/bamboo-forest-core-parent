@@ -15,8 +15,8 @@ import com.bamboo.model.Comment;
  */
 @Repository
 public interface CommentRepository extends MongoRepository<Comment, String> {
+
 	@Query("{ '_id' :?0 }")
 	List<Comment> findByUserId(String id);
-
 	
 }

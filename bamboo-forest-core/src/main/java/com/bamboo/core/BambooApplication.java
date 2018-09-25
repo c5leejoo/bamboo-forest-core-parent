@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+
+import com.bamboo.repository.CommentRepository;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -19,6 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  *       Main class to launch the application
  */
 @SpringBootApplication
+@EnableMongoRepositories(basePackages = "com.bamboo.repository")
 public class BambooApplication extends SpringBootServletInitializer {
 
 	@Override

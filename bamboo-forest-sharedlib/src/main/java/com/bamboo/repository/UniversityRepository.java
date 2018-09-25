@@ -13,8 +13,4 @@ import com.bamboo.model.University;
  */
 @Repository
 public interface UniversityRepository extends MongoRepository<University, String> {
-	
-	@Query("{'name:?0'}")
-	University findByName(String name);
-	
 }
