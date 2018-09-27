@@ -1,6 +1,7 @@
 package com.bamboo.request;
 
 import com.bamboo.model.Comment;
+import com.bamboo.model.Post;
 import com.bamboo.model.User;
 
 /**
@@ -9,8 +10,18 @@ import com.bamboo.model.User;
  * 
  */
 public class CommentRequest {
+
 	private User user;
 	private Comment comment;
+	private Post post;
+
+	public Post getPost() {
+		return post;
+	}
+
+	public void setPost(Post post) {
+		this.post = post;
+	}
 
 	public User getUser() {
 		return user;

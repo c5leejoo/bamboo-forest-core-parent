@@ -24,7 +24,6 @@ public class PostService {
 	 * 
 	 */
 	public PostResponse createPost(PostRequest requestBody) {
-		// TODO Auto-generated method stub
 		
 		postRepository.save(requestBody.getPost());
 		return null;
@@ -36,7 +35,6 @@ public class PostService {
 	 * 
 	 */
 	public PostResponse deletePost(PostRequest requestBody) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -46,7 +44,6 @@ public class PostService {
 	 * 
 	 */
 	public PostResponse updatePost(PostRequest requestBody) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
