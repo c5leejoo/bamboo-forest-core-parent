@@ -18,7 +18,7 @@ public class Post {
 	String _id;
 	String title;
 	String contents;
-	String university;
+	String universityId;
 	Date postCreatedDate;
 	Date lastUpdatedDate;
 	List<Comment> comments;
@@ -48,12 +48,12 @@ public class Post {
 		this.contents = contents;
 	}
 
-	public String getUniversity() {
-		return university;
+	public String getUniversityId() {
+		return universityId;
 	}
 
-	public void setUniversity(String university) {
-		this.university = university;
+	public void setUniversityId(String universityId) {
+		this.universityId = universityId;
 	}
 
 	public Date getPostCreatedDate() {

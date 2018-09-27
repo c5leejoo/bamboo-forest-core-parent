@@ -18,9 +18,9 @@ public class User {
 	String _id;
 	String username;
 	String password;
-	List<String> userLikes;
-	List<String> userComments;
-	List<String> userPosts;
+	List<String> userLikes; // contains post id that user liked
+	List<String> userComments; // contains comment id that user commented
+	List<String> userPosts; // contains post id that user posted
 
 	public String getId() {
 		return _id;
